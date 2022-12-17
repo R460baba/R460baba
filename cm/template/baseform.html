@@ -1,0 +1,12 @@
+
+{%extends 'base.html'%}
+{%load static %}
+{%block contents%}
+    <form method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button value="submit">submit</button>
+    </form>
+    <img src="{% static 'img/ntr1.jpg' %}">
+
+{%endblock%}

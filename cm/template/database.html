@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%block contents%}
+    {%if data%}
+    <table border=3px>
+        <thead>
+            <th>username</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>phone</th>
+            <th>email</th>
+        </thead>
+        {%for i in data%}
+        <tr>
+            <td>{{i.username}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.gender}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.email}}</td>
+            
+        </tr>
+        {%endfor%}
+    </table>
+    {%else%}
+    <p>no table</p>
+    {%endif%}
+{%endblock%}
